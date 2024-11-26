@@ -89,6 +89,12 @@ declare namespace Ffmpeg {
         streams: FfprobeStream[];
         format: FfprobeFormat;
         chapters: any[];
+        side_data?: FfprobeSideData;
+    }
+
+    interface FfprobeSideData {
+        [key: string]: any;
+        rotation?: string | number | undefined;
     }
 
     interface FfprobeStream {
