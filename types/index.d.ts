@@ -408,6 +408,7 @@ declare namespace Ffmpeg {
          * @param progress.targetSize current output file size
          * @param progress.timemark current video timemark
          * @param [progress.percent] processing progress (may not be available depending on input)
+         * @param [progress.speed] processing speed (may not be available depending on input)
          */
         on(
             event: "progress",
@@ -418,6 +419,7 @@ declare namespace Ffmpeg {
                 targetSize: number;
                 timemark: string;
                 percent?: number | undefined;
+                speed?: number | undefined;
             }) => void,
         ): this;
 
